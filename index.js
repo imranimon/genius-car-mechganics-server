@@ -67,6 +67,14 @@ app.get('/', (req, res) => {
     res.send('Genius Car Mechanic Server Running')
 })
 
+app.get('/api', (req, res) => {
+    const api = {
+        '/services': 'To GET all the services',
+        'services/:id': 'A GET or DELETE a single service by its id'
+    }
+    res.json(api)
+})
+
 app.listen(port, () => {
     console.log('Running Genius Server on port', port);
 });
