@@ -70,7 +70,7 @@ app.get('/', (req, res) => {
 app.get('/api', (req, res) => {
     const api = {
         '/services': 'To GET all the services',
-        'services/:id': 'A GET or DELETE a single service by its id'
+        '/services/:id': 'A GET or DELETE a single service by its id'
     }
     res.json(api)
 })
